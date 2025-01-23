@@ -1,43 +1,55 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
     <title>Landing Page</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: 'Lexend Deca', sans-serif;
+      }
+      .font-bold {
+        font-weight: 700; /* Utilisé pour les titres ou textes importants */
+      }
+      .font-normal {
+        font-weight: 400; /* Par défaut pour les paragraphes */
+      }
+    </style>
+    
   </head>
   <body class="min-h-screen bg-[#0B0F19] text-white">
-   <!-- Navigation Bar -->
-<nav class="fixed top-0 left-0 w-full z-10 bg-[#111827]">
-  <div class="container mx-auto px-4 py-6 flex items-center justify-between">
-    <div class="flex items-center">
-      <span class="text-white text-xl font-bold">About</span>
-      <span class="text-yellow-500 text-xl font-bold">Me.</span>
+   
+<!-- Navbar Section -->
+<section class="bg-[#020617] py-4 fixed top-0 left-0 w-full z-50">
+  <div class="flex items-center gap-[20px] justify-center mx-auto max-w-[1440px] px-4">
+    <!-- Logo Section -->
+    <div class="flex items-center justify-center w-[115px] h-[30px] ml-[145px]">
+      <span class="text-white text-2xl font-bold tracking-wide">About</span>
+      <span class="text-yellow-500 text-2xl font-bold tracking-wide ml-1">Me.</span>
     </div>
 
-    <!-- Mobile Menu Toggle -->
-    <div class="md:hidden flex items-center">
-      <!-- Checkbox for toggling the menu -->
-      <input type="checkbox" id="menu-toggle" class="hidden" />
-      <label for="menu-toggle" class="cursor-pointer">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8 text-white">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </label>
+    <!-- Navigation Links -->
+    <div class="flex items-center space-x-6 ml-[310px]">
+      <a href="#home" class="text-white hover:text-blue-500 transition-colors">HOME</a>
+      <a href="#about" class="text-white hover:text-blue-500 transition-colors">ABOUT</a>
+      <a href="#services" class="text-white hover:text-blue-500 transition-colors">SERVICE</a>
+      <a href="#portfolio" class="text-white hover:text-blue-500 transition-colors">PORTFOLIO</a>
+      <a href="#resume" class="text-white hover:text-blue-500 transition-colors">RESUME</a>
+      <a href="#blog" class="text-white hover:text-blue-500 transition-colors">BLOG</a>
+      <a href="#contact" class="text-white hover:text-blue-500 transition-colors">CONTACT</a>
     </div>
   </div>
+</section>
 
-  <!-- Mobile Navigation Links (Initially Hidden) -->
-  <div class="md:hidden hidden bg-[#111827] px-4 py-6 space-y-4" id="mobile-menu">
-    <a href="#home" class="text-gray-300 hover:text-white transition-colors">HOME</a>
-    <a href="#about" class="text-gray-300 hover:text-white transition-colors">ABOUT</a>
-    <a href="#services" class="text-gray-300 hover:text-white transition-colors">SERVICE</a>
-    <a href="#portfolio" class="text-gray-300 hover:text-white transition-colors">PORTFOLIO</a>
-    <a href="#resume" class="text-gray-300 hover:text-white transition-colors">RESUME</a>
-    <a href="#blog" class="text-gray-300 hover:text-white transition-colors">BLOG</a>
-    <a href="#contact" class="text-gray-300 hover:text-white transition-colors">CONTACT</a>
-  </div>
-</nav>
+
+    
+    
+    
+    
 
 <!-- Tailwind CSS to manage the toggle -->
 <style>
@@ -48,101 +60,105 @@
 </style>
 
 
-    <!-- Hero Section -->
-    <section
-      id="home"
-      class="w-full h-screen bg-[#111827] flex items-center justify-center"
-    >
-      <div class="grid md:grid-cols-2 gap-12 items-center max-w-4xl mx-auto">
-        <div class="space-y-6 text-center md:text-left">
-          <div class="space-y-4">
-            <p class="text-yellow-500">Hello, Welcome</p>
-            <h1 class="text-white text-5xl font-bold">I'm Anderson Coper</h1>
-            <p class="text-gray-400 max-w-lg mx-auto md:mx-0">
-              There are many variations of passages of Lorem Ipsum available,
-              but the majority have suffered alteration in some form, by
-              injected humour.
-            </p>
-          </div>
-          <button
-            class="bg-yellow-500 text-black px-6 py-3 rounded hover:bg-yellow-400 transition-colors"
-          >
-            Contact us
-          </button>
+  <!-- Hero Section -->
+  <section
+    id="home"
+    class="w-full h-screen bg-[#111827] flex items-center justify-center"
+  >
+    <div class="grid md:grid-cols-2 gap-[290px] items-center max-w-4xl mx-auto">
+      <div class="space-y-6 text-center md:text-left">
+        <div class="space-y-4">
+          <p class="text-yellow-500">Hello, Welcome</p>
+          <h1 class="text-white text-5xl font-bold whitespace-nowrap">I m Anderson Coper</h1>
+          <p class="text-gray-400 max-w-lg mx-auto md:mx-0">
+            There are many variations of passages of Lorem Ipsum available,
+            but the majority have suffered alteration in some form, by
+            injected humour.
+          </p>
         </div>
-        <div class="relative">
-          <div
-            class="aspect-square max-w-md mx-auto overflow-hidden rounded-2xl"
-          >
-            <img
-              src="assets/profil-image.png"
-              alt="Profile"
-              class="object-cover w-full h-full"
-            />
-          </div>
+        <button
+          class="w-[123] h-[43] bg-yellow-500 text-black px-6 py-3 rounded hover:bg-yellow-400 transition-colors"
+        >
+          Contact us
+        </button>
+      </div>
+      <div class="relative">
+        <div class="w-[427px] h-[427px] mx-auto overflow-hidden rounded-2xl ml-2">
+          <img
+            src="assets/profil-image.png"
+            alt="Profile"
+            class="object-cover w-full h-full"
+          />
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- About Me Section -->
-    <section
-      id="about"
-      class="w-full h-screen bg-[#020617] flex items-center justify-center"
-    >
-      <div class="grid md:grid-cols-2 items-center gap-12 max-w-4xl mx-auto">
-        <!-- Image Section -->
-        <div class="relative flex justify-center">
-          <div
-            class="w-64 h-64 md:w-80 md:h-80 rounded-lg overflow-hidden relative"
-          >
-            <img
-              src="images/about.png"
-              alt="Profile"
-              class="object-cover w-full h-full"
-            />
-          </div>
-        </div>
-        <!-- Content Section -->
-        <div class="space-y-6 text-center md:text-left">
-          <h2 class="text-4xl font-bold">
-            About <span class="text-yellow-500">Me</span>
-          </h2>
-          <p class="text-gray-400">
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered alteration in some form, by injected
-            humour.
-          </p>
-          <p class="text-gray-400">
-            Passages of Lorem Ipsum are available, but the majority have
-            suffered alteration in some form, by injected humour.
-          </p>
-          <button
-            class="bg-yellow-500 text-black px-6 py-3 rounded hover:bg-yellow-400 transition-colors"
-          >
-            Contact us
-          </button>
-        </div>
+
+      <!-- About Me Section -->
+  <section
+  id="about"
+  class="w-full h-screen bg-[#020617] flex items-center justify-center"
+>
+  <div class="grid md:grid-cols-2 gap-[120px] items-center max-w-4xl mx-auto">
+    <!-- Image Section -->
+    <div class="relative flex justify-center">
+      <div
+        class="w-[480px] h-[396px] rounded-lg overflow-hidden relative"
+      >
+        <img
+          src="images/about.png"
+          alt="Profile"
+          class="object-cover w-full h-full"
+        />
       </div>
-    </section>
-
-    <!-- Services Section -->
-    <section
-    id="services"
-      class="w-full h-screen bg-[#111827] mx-auto px-4 py-20 text-center"
-    >
-      <h2 class="text-4xl font-bold mb-6">
-        My <span class="text-yellow-500">Service</span>
+    </div>
+    <!-- Content Section -->
+    <div class="space-y-6 text-center w-[509px] h-[348px] gap-[32px] md:text-left">
+      <h2 class="text-4xl font-bold">
+        About <span class="text-yellow-500">Me</span>
       </h2>
-      <p class="text-gray-400 max-w-2xl mx-auto mb-12">
-        There are many variations of passages of Lorem Ipsum <br />
-        available, but the majority have suffered alteration in some <br />
-        form, by injected humour.
+      <p class="text-gray-400">
+        There are many variations of passages of Lorem Ipsum <br> available, but
+        the majority have suffered alteration in some <br> form, by injected
+        humour.
       </p>
+      <p class="text-gray-400">
+        Passages of Lorem Ipsum are available, but the majority have
+        suffered alteration in some form, by injected humour.
+      </p>
+      <button
+        class="bg-yellow-500 text-black px-6 py-3 rounded hover:bg-yellow-400 transition-colors"
+      >
+        Contact us
+      </button>
+    </div>
+  </div>
+</section>
+
+  <!-- Services Section -->
+  <section
+    id="services"
+    class="w-full h-auto bg-[#111827] mx-auto px-4 py-20 flex justify-center"
+  >
+    <!-- Wrapper pour tout aligner -->
+    <div class="w-full max-w-[1100px]">
+      <!-- Titre et Description -->
+      <div class="mb-12 w-[461px] mx-auto space-y-6 ml-20">
+        <h2 class="text-4xl font-bold ml-4">
+          My <span class="text-yellow-500">Service</span>
+        </h2>
+        <p class="text-gray-500 ml-4">
+          There are many variations of passages of Lorem Ipsum 
+          available, but the majority have suffered alteration in some 
+          form, by injected humour.
+        </p>
+      </div>
 
       <!-- Service Cards -->
-      <div class="flex flex-wrap justify-center gap-6">
+      <div class="flex justify-center flex-wrap gap-20 max-w-[1100px] mx-auto">
         <!-- Card 1 -->
-        <div class="bg-[#0E1424] p-6 rounded-lg shadow-md w-64">
+        <div class="bg-[#020617] p-6 rounded-lg shadow-md w-[280px] h-[285px] ml-20">
           <div class="text-yellow-500 mb-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -159,15 +175,15 @@
               />
             </svg>
           </div>
-          <h3 class="text-lg font-bold mb-4">Digital Marketing</h3>
-          <p class="text-gray-400 text-sm">
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered alteration in some form.
+          <h3 class="text-lg font-bold mb-4 text-center">Digital <br> Marketing</h3>
+          <p class="text-gray-500 text-sm text-center">
+            There are many variations of <br> passages of Lorem Ipsum available,<br>
+            but the majority havesuffered <br> alteration in some form.
           </p>
         </div>
 
         <!-- Card 2 -->
-        <div class="bg-[#0E1424] p-6 rounded-lg shadow-md w-64">
+        <div class="bg-[#020617] p-6 rounded-lg shadow-md w-[280px] h-[285px]">
           <div class="text-yellow-500 mb-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -184,15 +200,15 @@
               />
             </svg>
           </div>
-          <h3 class="text-lg font-bold mb-4">Web Development</h3>
-          <p class="text-gray-400 text-sm">
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered alteration in some form.
+          <h3 class="text-lg font-bold mb-4 text-center">Web <br> Development</h3>
+          <p class="text-gray-500 text-sm text-center">
+            There are many variations of <br> passages of Lorem Ipsum available,<br>
+            but the majority havesuffered <br> alteration in some form.
           </p>
         </div>
 
         <!-- Card 3 -->
-        <div class="bg-[#0E1424] p-6 rounded-lg shadow-md w-64">
+        <div class="bg-[#020617] p-6 rounded-lg shadow-md w-[280px] h-[285px]">
           <div class="text-yellow-500 mb-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -209,150 +225,160 @@
               />
             </svg>
           </div>
-          <h3 class="text-lg font-bold mb-4">Creative Graphic Design</h3>
-          <p class="text-gray-400 text-sm">
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered alteration in some form.
+          <h3 class="text-lg font-bold mb-4 text-center">Creative <br> Graphic Design</h3>
+          <p class="text-gray-500 text-sm text-center">
+            There are many variations of <br> passages of Lorem Ipsum available,<br>
+            but the majority havesuffered <br> alteration in some form.
           </p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Portfolio Section -->
-    <section
-      id="portfolio"
-      class="container mx-auto px-4 py-20 text-center bg-dark text-white max-w-4xl"
-    >
-      <h2 class="text-4xl font-bold mb-6">
-        My <span class="text-yellow-500">Portfolio</span>
-      </h2>
-      <p class="text-gray-400 max-w-2xl mx-auto mb-12">
-        There are many variations of passages of Lorem Ipsum <br />
-        available, but the majority have suffered alteration in some <br />
-        form, by injected humour.
-      </p>
 
-      <!-- Portfolio Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <!-- Large Image on the left -->
-        <div class="col-span-2 row-span-2 rounded-lg overflow-hidden shadow-md">
-          <img
-            src="images/porfolio1.jpg"
-            alt="Portfolio Item 1"
-            class="object-cover w-full h-[380px]"
-          />
-        </div>
 
-        <!-- Small Images on the right -->
-        <div class="col-span-2 grid grid-rows-2 gap-4">
-          <div class="grid grid-cols-2 gap-4">
-            <div class="rounded-lg overflow-hidden shadow-md">
-              <img
-                src="images/porfolio2.jpg"
-                alt="Portfolio Item 2"
-                class="object-cover w-full h-[180px]"
-              />
-            </div>
-            <div class="rounded-lg overflow-hidden shadow-md">
-              <img
-                src="images/porfolio3.jpg"
-                alt="Portfolio Item 3"
-                class="object-cover w-full h-[180px]"
-              />
-            </div>
-          </div>
-          <div class="grid grid-cols-2 gap-4">
-            <div class="rounded-lg overflow-hidden shadow-md">
-              <img
-                src="images/porfolio4.jpg"
-                alt="Portfolio Item 4"
-                class="object-cover w-full h-[180px]"
-              />
-            </div>
-            <div class="rounded-lg overflow-hidden shadow-md">
-              <img
-                src="images/porfolio5.jpg"
-                alt="Portfolio Item 5"
-                class="object-cover w-full h-[180px]"
-              />
-            </div>
-          </div>
-        </div>
+<!-- Portfolio Section -->
+<section
+  id="portfolio"
+  class="bg-[#020617] w-full h-auto px-4 py-20 text-center text-white"
+>
+  <div class="mx-auto max-w-4xl">
+    <h2 class="text-4xl font-bold mb-6">
+      My <span class="text-yellow-500">Portfolio</span>
+    </h2>
+    <p class="text-gray-400 max-w-2xl mx-auto mb-12 text-center">
+      There are many variations of passages of Lorem Ipsum <br />
+      available, but the majority have suffered alteration in some <br />
+      form, by injected humour.
+    </p>
+
+    <!-- Portfolio Grid -->
+    <div class="grid grid-cols-4 grid-rows-2 gap-2">
+      <!-- Large Image -->
+      <div class="col-span-2 row-span-2 rounded-lg overflow-hidden shadow-md">
+        <img
+          src="images/porfolio1.jpg"
+          alt="Portfolio Item 1"
+          class="object-cover w-[540px] h-[565px]"
+        />
       </div>
-    </section>
 
-    <!-- Experiences Section -->
-    <section class="bg-[#111827] py-20 text-center text-white">
-      <div class="container mx-auto px-4">
-        <h2 class="text-4xl font-bold mb-6">
+      <!-- Top Right Images -->
+      <div class="rounded-lg overflow-hidden shadow-md">
+        <img
+          src="images/porfolio2.jpg"
+          alt="Portfolio Item 2"
+          class="object-cover w-[256px] h-[268px]"
+        />
+      </div>
+      <div class="rounded-lg overflow-hidden shadow-md">
+        <img
+          src="images/porfolio3.jpg"
+          alt="Portfolio Item 3"
+          class="object-cover w-[256px] h-[268px]"
+        />
+      </div>
+
+      <!-- Bottom Right Images -->
+      <div class="rounded-lg overflow-hidden shadow-md">
+        <img
+          src="images/porfolio4.jpg"
+          alt="Portfolio Item 4"
+          class="object-cover w-[256px] h-[268px]"
+        />
+      </div>
+      <div class="rounded-lg overflow-hidden shadow-md">
+        <img
+          src="images/porfolio5.jpg"
+          alt="Portfolio Item 5"
+          class="object-cover w-[256px] h-[268px]"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+  <!-- Experiences Section -->
+  <section class="w-full h-auto bg-[#191D28] mx-auto px-4 py-20 flex justify-center">
+    <div class="w-full max-w-[1100px]">
+      <!-- Title and Description -->
+      <div class="mb-12 w-[461px] mx-auto space-y-6 ml-20">
+        <h2 class="text-4xl font-bold ml-4">
           My <span class="text-yellow-500">Experiences</span>
         </h2>
-        <p class="text-gray-400 max-w-2xl mx-auto mb-12">
-          There are many variations of passages of Lorem Ipsum available, but
-          the majority have suffered alteration in some form, by injected
+        <p class="text-gray-500 ml-4">
+          There are many variations of passages of Lorem Ipsum available, but 
+          the majority have suffered alteration in some form, by injected 
           humour.
         </p>
+      </div>
 
-        <!-- Experience Cards -->
-        <div class="grid md:grid-cols-3 gap-8">
-          <!-- Card 1 -->
-          <div class="bg-[#1E293B] p-6 rounded-lg shadow-md">
-            <h3 class="text-lg font-semibold mb-2">June-2002 - 2020</h3>
-            <h4 class="text-xl font-bold text-yellow-500 mb-2">
-              UX/UI Designer
-            </h4>
-            <p class="text-gray-400 mb-2">Figma</p>
-            <p class="text-gray-400 text-sm">
-              There are many variations of passages of Lorem Ipsum available,
-              but the majority have suffered alteration in some.
-            </p>
-          </div>
+      <!-- Experience Cards -->
+      <div class="grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-[#020617] p-6 rounded-lg shadow-md w-[280px] h-[235px] ml-20">
+          <h3 class="text-lg font-semibold mb-2">June-2002 - 2020</h3>
+          <h4 class="text-xl font-bold text-yellow-500 mb-2">
+            UX/UI Designer
+          </h4>
+          <p class="text-gray-400 mb-2">Figma</p>
+          <p class="text-gray-400 text-sm">
+            There are many variations of passages of Lorem Ipsum available,
+            but the majority have suffered alteration in some.
+          </p>
+        </div>
 
-          <!-- Card 2 -->
-          <div class="bg-[#1E293B] p-6 rounded-lg shadow-md">
-            <h3 class="text-lg font-semibold mb-2">June-2002 - 2020</h3>
-            <h4 class="text-xl font-bold text-yellow-500 mb-2">
-              Product Designer
-            </h4>
-            <p class="text-gray-400 mb-2">Adobe Photoshop</p>
-            <p class="text-gray-400 text-sm">
-              There are many variations of passages of Lorem Ipsum available,
-              but the majority have suffered alteration in some.
-            </p>
-          </div>
+        <!-- Card 2 -->
+        <div class="bg-[#020617] p-6 rounded-lg shadow-md w-[280px] h-[260px] ml-20">
+          <h3 class="text-lg font-semibold mb-2">June-2002 - 2020</h3>
+          <h4 class="text-xl font-bold text-yellow-500 mb-2">
+            Product Designer
+          </h4>
+          <p class="text-gray-400 mb-2">Adobe Photoshop</p>
+          <p class="text-gray-400 text-sm">
+            There are many variations of passages of Lorem <br> Ipsum available,
+            but the majority <br> have suffered <br> alteration in some.
+          </p>
+        </div>
 
-          <!-- Card 3 -->
-          <div class="bg-[#1E293B] p-6 rounded-lg shadow-md">
-            <h3 class="text-lg font-semibold mb-2">June-2002 - 2020</h3>
-            <h4 class="text-xl font-bold text-yellow-500 mb-2">
-              Graphic Designer
-            </h4>
-            <p class="text-gray-400 mb-2">Adobe Photoshop</p>
-            <p class="text-gray-400 text-sm">
-              There are many variations of passages of Lorem Ipsum available,
-              but the majority have suffered alteration in some.
-            </p>
-          </div>
+        <!-- Card 3 -->
+        <div class="bg-[#020617] p-6 rounded-lg shadow-md w-[280px] h-[235px] ml-20">
+          <h3 class="text-lg font-semibold mb-2">June-2002 - 2020</h3>
+          <h4 class="text-xl font-bold text-yellow-500 mb-2">
+            Graphic Designer
+          </h4>
+          <p class="text-gray-400 mb-2">Adobe Photoshop</p>
+          <p class="text-gray-400 text-sm">
+            There are many variations of passages of Lorem Ipsum available,
+            but the majority have suffered alteration in some.
+          </p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <div class="bg-[#0a0b14] text-white py-16">
-      <div class="container mx-auto px-4 max-w-6xl">
+
+    <div class="background: #020617 text-white py-16">
+      <div class="container mx-auto px-6 max-w-6xl">
           <!-- Contact Section -->
           <h2 class="text-4xl font-bold mb-4 text-center">
               Contact <span class="text-yellow-400">Me</span>
           </h2>
           <p class="text-center text-gray-400 max-w-2xl mx-auto mb-12">
-              There are many variations of passages ofLorem Ipsumavailable, but the majority havesuffered alteration in some form, by injected humour.
+              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.
           </p>
-  
+    
           <div class="grid md:grid-cols-2 gap-12 mb-20">
               <!-- Contact Info -->
-              <div class="space-y-6">
+              <div class="space-y-6 ml-20">
                   <div>
                       <span class="text-yellow-400">Address _</span>
-                      <span class="ml-2">23 S 80 Road, BenedIct,ne, 68316</span>
+                      <span class="ml-2">23 S 80 Road, Benedict,ne, 68316</span>
                       <p class="mt-1">United States</p>
                   </div>
                   
@@ -362,7 +388,7 @@
                   </div>
                   
                   <div>
-                      <span class="text-yellow-400">E mail _</span>
+                      <span class="text-yellow-400">E-mail _</span>
                       <span class="ml-2">abc.xyz@gmail.com</span>
                   </div>
                   
@@ -371,35 +397,35 @@
                       <span class="ml-2">www.abc.xyz.com</span>
                   </div>
               </div>
-  
+    
               <!-- Contact Form -->
               <div class="space-y-4">
                   <input 
                       type="text" 
                       placeholder="Name" 
-                      class="w-full p-3 bg-[#1e2132] rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                      class="w-[350] h-[63] p-3 bg-[#1e2132] rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400"
                   >
                   <textarea 
                       placeholder="Message" 
                       class="w-full p-3 bg-[#1e2132] rounded-md min-h-[200px] focus:outline-none focus:ring-2 focus:ring-yellow-400"
                   ></textarea>
-                  <button class="px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-black rounded-md transition-colors">
+                  <button class="w-[123] h-[59]  px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-black rounded-md transition-colors">
                       Contact us
                   </button>
               </div>
           </div>
-  
+    
           <!-- About Section -->
           <div class="text-center">
               <h2 class="text-4xl font-bold mb-4">
-                  About<span class="text-yellow-400">Me.</span>
+                  About <span class="text-yellow-400">Me.</span>
               </h2>
               <p class="text-gray-400 max-w-2xl mx-auto mb-8">
-                  There are many variations of passages ofLorem Ipsumavailable, but the majority <br> havesuffered alteration in some form.
+                  There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
               </p>
               
               <!-- Social Icons -->
-              <div class="flex justify-center gap-4">
+              <div class="flex justify-center gap-6 mb-8">
                   <!-- Facebook -->
                   <a href="#" class="w-10 h-10 bg-[#1e2132] rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-black transition-colors">
                       <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -433,6 +459,7 @@
               </div>
           </div>
       </div>
-  </div>
+    </div> 
+    
   </body>
-</html>
+</html> 
